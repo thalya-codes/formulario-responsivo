@@ -1,0 +1,90 @@
+body {
+    background-color: rgb(255, 225, 239);
+    
+}
+
+
+/*centraliza o formulário*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 150px;
+
+}
+
+
+/* alinha os campos do formulário*/
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 25vw;
+    height: 30vw;
+
+    padding: 50px;
+    border-radius: 10px 30px;
+    background-color: #fff;
+}
+
+
+/*estilo do input*/
+.form-input {
+    border: none;
+    border-bottom: 2px solid rgb(105, 105, 105);
+
+    padding-top: 10px;
+    padding-bottom: 5px;
+    outline: none;
+}
+
+/* todos os label menos o primeiro irá ter essa prop*/
+label:not(:first-child) {
+    margin-top: 50px;
+}
+
+
+button {
+    background: linear-gradient(126deg, rgba(255,161,215,1) 47%, rgba(209,45,253,0.6727065826330532) 100%);
+    height: 40px;
+
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    
+    border: none;
+    border-radius: 5px;
+    margin-top: 60px;
+}
+/*
+    O segredo para se fazer uma boa responsividade é você analisar 
+    como  a sua página se comporta, conforme você redimensiona a página
+    e ver os itens que precisam de ajustes. 
+
+    Podemos utilizar a developer tools do navegador, para saber em 
+    qual tamanho a nossa página começa a quebrar.
+
+    Nesse exemplo precisamos apenas ajustar a largura do 
+    formulário.
+
+    criando um site responsivo do zero
+
+*/
+/*BREVE EXPLICAÇÃO SOBRE MEDIA QUERIES*/
+@media(max-width: 700px) {
+    main {
+        margin-top:  70px;
+        margin-bottom: 70px;
+    }
+    .form-container {
+        width: 50vw;
+        height: 100%;
+    }
+    button {
+        margin-top: 40px;
+        padding: 10px 10px;
+    }
+}
+
